@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* NAVBAR STYLING */
+nav {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+nav > h1 {
+  margin-left: 30px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+nav > ul {
+  margin-right: 35px;
+  display: flex;
+  font-weight: 700;
+}
+nav > ul > a {
+  text-decoration: none;
+  color: rgb(119, 119, 119);
+  font-size: 1rem;
+  padding: 0px 9px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: 550;
+  transition: color 0.5s ease, transform 0.5s ease, border-bottom 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+/* Underline effect */
+nav > ul > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0a58ca; /* Underline color */
+  transition: width 0.3s ease;
+}
+/* On hover, expand the underline to match the content width */
+nav > ul > a:hover::after {
+  width: 100%; /* Adjusts to the width of the content */
+}
+a.hover-effect:hover {
+  color: #000;
+  font-weight: 600;
+  text-shadow: 0 0 80px #000, 0 0 80px #000;
+}
+
+/* HAMBURGER MENU STYLING */
+.hamburgersection {
+  display: none;
+}
+.menu-toggle {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #0a58ca;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* When the hamburger menu is clicked (active) */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.menu-toggle:hover .bar {
+  background-color: #0a58ca;
+}
+
+/* About section styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin: 120px auto 5px auto;
+  color: white;
+  padding: 40px 20px;
+  max-width: 1200px;
+  background-color: #0a58ca;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.pht {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.pht img {
+  width: 350px;
+  height: 380px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  border: 3px solid black;
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+.text-content {
+  flex: 1 1 500px;
+  padding: 0 10px;
+}
+h2 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: black;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.lead {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+.text-muted {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+.text-primary {
+  color: black;
+  font-weight: 550;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 30px;
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* FOOTER STYLIING */
+footer {
+  width: 100%;
+  height: 390px;
+  height: auto;
+  background-color: #111;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+footer > .first,
+.second,
+.third {
+  margin: 6px 75px;
+}
+footer > div > h1 {
+  color: #0d6efd;
+  font-size: 1.6rem;
+  margin: 0px 20px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+footer > .first > p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+footer > .second > a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 5px 0px;
+  border: 1px solid #0d6efd;
+  color: #0d6efd;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+footer > .second > a:hover {
+  background-color: #0d6efd;
+  color: black;
+  box-shadow: 0 0 8px #0d6efd;
+}
+footer > .third > a {
+  color: whitesmoke;
+  font-size: 1.4rem;
+  margin: 0 12px;
+  transition: color 0.3s ease-in-out;
+}
+footer > .third > a:hover {
+  color: #0d6efd;
+  text-shadow: 0 0 24px #0d6efd;
+}
+
+footer > .fourth {
+  position: relative;
+}
+footer > .fourth > p {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+}
+footer > .fourth > .back-to-top {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #111, #333);
+  color: white;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  background: linear-gradient(135deg, #333, #555);
+  transform: scale(1.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 1024px) {
+  nav {
+    display: flex;
+    gap: 10px;
+  }
+  nav > ul > a {
+    padding: 0px 6px;
+  }
+  footer > .fourth > .back-to-top {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  footer > .first,
+  footer > .second,
+  footer > .third {
+    margin: 10px 30px;
+    text-align: center;
+  }
+  footer > div > h1 {
+    font-size: 1.4rem;
+  }
+  footer > .first > p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  footer > .second > a {
+    font-size: 0.8rem;
+  }
+  footer > .third {
+    margin-top: 15px;
+  }
+  footer > .third > a {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
+  footer > .fourth > p {
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  /* nav > ul {
+    display: none;
+  } */
+  .hamburgersection {
+    display: block;
+  }
+  nav > ul {
+    flex-direction: column;
+    position: fixed;
+    top: 65px;
+    margin-right: 0px;
+    right: -100%;
+    width: 130px;
+    height: 326px;
+    background-color: #111;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+    padding: 10px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+  nav > ul.active {
+    right: 0;
+  }
+  nav > ul a {
+    color: white;
+    display: block;
+    margin-bottom: 20px;
+  }
+  a.hover-effect:hover {
+  color: #fff;
+  }
+  footer {
+    padding: 15px 0;
+  }
+  footer > .first,
+  footer > .second,
+  footer > .third {
+    margin: 8px 20px;
+  }
+  footer > div > h1 {
+    font-size: 1.2rem;
+  }
+  footer > .first > p {
+    font-size: 0.8rem;
+  }
+  footer > .second > a {
+    font-size: 0.75rem;
+  }
+  footer > .third > a {
+    font-size: 1rem;
+    margin: 0 6px;
+  }
+  footer > .fourth > p {
+    font-size: 0.8rem;
+  }
+  .container {
+    flex-direction: column;
+    padding: 30px 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .pht img {
+    margin-top: 30px;
+    width: 280px;
+    height: 300px;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .lead,
+  .text-muted {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    display: block;
+    margin: 25px auto 0;
+  }
+}
+@media (max-width: 480px) {
+  footer > div > h1 {
+    font-size: 1rem;
+  }
+  footer > .first > p {
+    font-size: 0.7rem;
+  }
+  footer > .second > a {
+    font-size: 0.6rem;
+  }
+  footer > .third > a {
+    font-size: 0.9rem;
+  }
+  footer > .fourth > p {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 426px) {
+  nav > h1 {
+    margin-left: 1px;
+    font-size: 1.6rem;
+  }
+  .menu-toggle {
+    width: 24px;
+    height: 15px;
+  }
+  .bar {
+    width: 20px;
+    height: 3px;
+  }
+}
+@media (max-width:315px){
+  .pht img {
+    margin-top: 30px;
+    width: 200px;
+    height: 270px;
+  }
+}

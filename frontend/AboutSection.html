@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Portfolio</title>
+    <link rel="stylesheet" href="AboutSection.css">
+    <link rel="icon" href="Images/titleImage.png">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ANIMATIONS -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVBAR SECTION STARTS -->
+    <nav data-aos="zoom-in">
+        <h1>Portfolio<span style="color: #0d6efd;">Zone<i class="fas fa-laptop-code"></i>
+            </span></h1>
+        <ul>
+            <a href="index.html" target="_self" style="color: #0d6efd;">Home</a>
+            <a href="#" class="hover-effect">About</a>
+            <a href="ServiceSection.html" target="_self" class="hover-effect">Services</a>
+            <a href="SkillsSection.html" target="_self" class="hover-effect">Skills</a>
+            <a href="ProjectSection.html" class="hover-effect">Projects</a>
+            <a href="ContactSection.html" target="_self" class="hover-effect">Contact</a>
+        </ul>
+        <div class="hamburgersection">
+            <i class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </i>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="container">
+        <div class="pht">
+            <img src="Images/sahilImg.jpeg" alt="SAHIL">
+        </div>
+
+        <div class="text-content">
+            <h2>Let’s Get <span style="color: black;">Acquainted</span></h2>
+            <p class="lead">
+                Hello! I'm <strong>SAHIL</strong>, a passionate <span class="text-primary">Web Developer</span>
+                currently learning the MERN stack (MongoDB, Express.js, React.js, and Node.js). I enjoy building
+                responsive and dynamic web applications, and I’m always excited to explore new technologies, improve
+                my skills, and take on meaningful projects.
+            </p>
+            <p class="text-muted">
+                With a background in <em>Computer Science</em> and foundational experience in technologies like
+                <strong>HTML, CSS, JavaScript, Bootstrap, Tailwind and React</strong>, I’m currently diving deeper into
+                the
+                MERN stack. I’m passionate about creating user-friendly and dynamic web applications, and I’m eager
+                to continue learning and growing with every project. Whether working independently or collaborating
+                with a team, I focus on building clean, functional, and intuitive interfaces.
+            </p>
+            <a href="ContactSection.html" class="btn-primary">Let's Connect</a>
+        </div>
+    </section>
+
+
+    <!-- LAST SECTION -->
+    <footer>
+        <div class="first">
+            <h1>SAHIL</h1>
+            <p>・ Web Developer | Passionate About Web Development</p>
+            <p>・ Currently Exploring MERN Stack & Full-Stack Development</p>
+            <p>・ Focused on Building Modern Web Applications</p>
+        </div>
+        <div class="second">
+            <h1>Key Sections</h1>
+            <a href="index.html">Home</a>
+            <a href="AboutSection.html">About</a>
+            <a href="ServiceSection.html">Services</a>
+            <a href="SkillsSection.html">Skills</a>
+            <a href="ProjectSection.html">Projects</a>
+        </div>
+        <div class="third">
+            <h1>Let's Connect Online</h1>
+            <a href="mailto:siddiquisahil735@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/8630774924" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1BjKaBVwZz/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/sahilrehan75" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/sahilrehan75" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/_sahil_rehan_75_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/SahilZone75" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sahil-9107422a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="fourth">
+            <p>&copy; 2025 Sahil. All rights reserved.</p>
+            <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        //for hamburger toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('nav > ul');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');  // Toggle hamburger icon animation
+            menu.classList.toggle('active');        // Toggle offcanvas menu visibility
+        });
+
+        //Top arrow icon for scrolling smooth        
+        const backToTopButton = document.querySelector('.back-to-top');
+        backToTopButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Section | Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Images/titleImage.png">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="ContactSection.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ANIMATIONS -->
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav data-aos="zoom-in">
+    <h1>Portfolio<span style="color: #0d6efd;">Zone <i class="fas fa-laptop-code"></i></span></h1>
+    <ul>
+      <a href="index.html" target="_self" style="color: #0d6efd;">Home</a>
+      <a href="AboutSection.html" target="_self" class="hover-effect">About</a>
+      <a href="ServiceSection.html" target="_self" class="hover-effect">Services</a>
+      <a href="SkillsSection.html" target="_self" class="hover-effect">Skills</a>
+      <a href="ProjectSection.html" class="hover-effect">Projects</a>
+      <a href="#" class="hover-effect">Contact</a>
+    </ul>
+    <div class="hamburgersection">
+      <i class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </i>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <h1 class="section-title">Contact Me</h1>
+    <div class="contact-box">
+
+      <!-- Map -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.049169036134!2d82.0785953149568!3d26.75627487632816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399023adf750155b%3A0x34215f020ab7896b!2sGonda%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1714721059912"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="email" id="email" placeholder="Your Email" required>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <!-- Loader (hidden by default) -->
+        <div id="loader" style="display: none;">Sending...</div>
+
+        <!-- Success / Error message -->
+        <div id="status-message"></div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrapper">
+
+      <!-- Footer Header -->
+      <div class="footer-header">
+        <h1>Let’s Connect</h1>
+        <p>You can contact us anytime via email or reach out on social media. We’re always happy to help and love
+          hearing from you!</p>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="footer-links">
+
+        <!-- First Row -->
+        <div class="footer-box">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:siddiquisahil735@gmail.com">siddiquisahil735@gmail.com</a>
+        </div>
+        <div class="footer-box">
+          <i class="fas fa-phone"></i>
+          <a href="tel:8630774924">+91 8630774924</a>
+        </div>
+        <div class="footer-box">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/SahilZone75" target="_blank">GitHub</a>
+        </div>
+
+        <!-- Second Row -->
+        <div class="footer-box">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/8630774924" target="_blank">WhatsApp</a>
+        </div>
+        <div class="footer-box">
+          <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com/_sahil_rehan_75_/" target="_blank">Instagram</a>
+        </div>
+        <div class="footer-box">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/sahil-9107422a5/" target="_blank">LinkedIn</a>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sahil. All rights reserved.</p>
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Hamburger toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav > ul');
+
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+
+    // Back to top scroll
+    const backToTopButton = document.querySelector('.back-to-top');
+    backToTopButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+
+    //CONNECTION
+    document.getElementById('contact-form').addEventListener('submit', async (e) => {
+      e.preventDefault();  // Prevent the form from reloading the page
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const loader = document.getElementById('loader');
+      const statusMessage = document.getElementById('status-message');
+
+      // Reset status message
+      statusMessage.style.display = 'none';
+      statusMessage.textContent = '';
+      statusMessage.className = '';
+
+      // Show loader immediately after form submission
+      loader.style.display = 'block';
+
+      // Track the start time to ensure loader is visible for at least 1 second
+      const startTime = Date.now();
+
+      try {
+        // Send data to backend API using Fetch
+        const response = await fetch('http://localhost:5000/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message }),
+        });
+
+        const data = await response.json();
+
+        // Wait until loader has been shown for at least 1 second before hiding it
+        const elapsedTime = Date.now() - startTime;
+        const timeToWait = Math.max(1000 - elapsedTime, 0); // 1000ms = 1 second
+
+        setTimeout(() => {
+          // Hide loader and show status message
+          loader.style.display = 'none';
+
+          // Display success or error message
+          if (response.ok) {
+            statusMessage.textContent = 'Message sent successfully!';
+            statusMessage.className = 'success';
+          } else {
+            statusMessage.textContent = data.message || 'Something went wrong!';
+            statusMessage.className = 'error';
+          }
+
+          statusMessage.style.display = 'block';
+
+          // Reset the form after successful submission
+          document.getElementById('contact-form').reset();
+
+          // Auto hide the success message after 5 seconds
+          setTimeout(() => {
+            statusMessage.style.display = 'none';
+          }, 5000);
+        }, timeToWait);
+
+      } catch (err) {
+        loader.style.display = 'none';
+        statusMessage.textContent = 'Error sending message.';
+        statusMessage.className = 'error';
+        statusMessage.style.display = 'block';
+      }
+    });
+
+
+  </script>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

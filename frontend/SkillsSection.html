@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills | Portfolio</title>
+    <link rel="stylesheet" href="SkillsSection.css">
+    <link rel="icon" href="Images/titleImage.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ANIMATIONS -->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav data-aos="zoom-in">
+        <h1>Portfolio<span style="color: #0d6efd;">Zone<i class="fas fa-laptop-code"></i>
+            </span></h1>
+        <ul>
+            <a href="index.html" target="_self" style="color: #0d6efd;">Home</a>
+            <a href="AboutSection.html" target="_self" class="hover-effect">About</a>
+            <a href="ServiceSection.html" target="_self" class="hover-effect">Services</a>
+            <a href="ProjectSection.html" class="hover-effect">Skills</a>
+            <a href="ProjectSection.html" class="hover-effect">Projects</a>
+            <a href="ContactSection.html" target="_self" class="hover-effect">Contact</a>
+        </ul>
+        <div class="hamburgersection">
+            <i class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </i>
+        </div>
+    </nav>
+
+
+    <section class="skills-section">
+        <h1 class="skills-title">SKILLS (Tools & Technologies)</h1>
+
+        <!-- Intro text -->
+        <p class="skills-intro">
+            Here are some of the tools, technologies, and frameworks I've worked with while building responsive and
+            scalable web applications.
+        </p>
+
+        <!-- Progress bar indicators (Optional) -->
+        <div class="skills-progress">
+            <div class="progress-item">
+                <span>Problem Solving</span>
+                <div class="progress-bar">
+                    <div class="fill" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <span>Team Collaboration</span>
+                <div class="progress-bar">
+                    <div class="fill" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="progress-item">
+                <span>Debugging</span>
+                <div class="progress-bar">
+                    <div class="fill" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="skills-tabs">
+            <button class="tab active" onclick="showSkills('frontend', this)">Frontend</button>
+            <button class="tab" onclick="showSkills('frameworkLibraries', this)">Frameworks/Libraries</button>
+            <button class="tab" onclick="showSkills('backend', this)">Backend</button>
+            <button class="tab" onclick="showSkills('database', this)">Database</button>
+            <button class="tab" onclick="showSkills('tools', this)">Tools</button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid" id="skills-content">
+            <!-- Skills will render here -->
+        </div>
+
+        <!-- Optional: Skill quote or summary -->
+        <div class="skills-quote">
+            <i class="fas fa-lightbulb"></i>
+            <p>"Continuous learning and adapting to new technologies is what keeps me passionate as a developer."</p>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="first">
+            <h1>SAHIL</h1>
+            <p>・ Web Developer | Passionate About Web Development</p>
+            <p>・ Currently Exploring MERN Stack & Full-Stack Development</p>
+            <p>・ Focused on Building Modern Web Applications</p>
+        </div>
+        <div class="second">
+            <h1>Key Sections</h1>
+            <a href="index.html">Home</a>
+            <a href="AboutSection.html">About</a>
+            <a href="ServiceSection.html">Services</a>
+            <a href="SkillsSection.html">Skills</a>
+            <a href="ProjectSection.html">Projects</a>
+        </div>
+        <div class="third">
+            <h1>Let's Connect Online</h1>
+            <!-- Links with only Font Awesome icons -->
+            <a href="mailto:siddiquisahil735@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/8630774924" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1BjKaBVwZz/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://x.com/sahilrehan75" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://t.me/sahilrehan75" target="_blank"><i class="fab fa-telegram"></i></a>
+            <a href="https://www.instagram.com/_sahil_rehan_75_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/SahilZone75" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sahil-9107422a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="fourth">
+            <p>&copy; 2025 Sahil. All rights reserved.</p>
+            <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+            <!-- href="#" yah page reload nhi krega bss page ke top pe move kara dega kyuki yeh HTMl ka default behaviour h. -->
+        </div>
+    </footer>
+
+    <script>
+        const skillData = {
+            frontend: [
+                { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", description: "Standard markup language for creating web pages." },
+                { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", description: "Used to style HTML elements visually." },
+                { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", description: "Programming language for interactive web behavior." }
+            ],
+            frameworkLibraries: [
+                { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg", description: "Popular CSS framework for responsive design." },
+                { name: "TailwindCSS", icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", description: "Utility-first CSS framework for rapid UI development." },
+                { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", description: "JavaScript library for building user interfaces." },
+            ],
+            backend: [
+                { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", description: "JavaScript runtime for building server-side apps." },
+                { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", description: "Minimal and flexible Node.js web app framework." },
+                { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", description: "General-purpose programming language." }
+            ],
+            database: [
+                { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", description: "NoSQL database for high-volume data storage." },
+                { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", description: "Relational database management system." },
+                { name: "SQL", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaqfqqm2x0PAdI7o9C145dT-sNbFTycnKJg&s", description: "Standard language for managing relational databases." }
+            ],
+            tools: [
+                { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Version control system for tracking changes." },
+                { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg", description: "Code hosting platform for version control." },
+                { name: "VSCode", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", description: "Popular code editor with extensions." },
+                { name: "Sublime Text", icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuXYnRcW78omHLY_MMF0GvTUo48v7fibmTEw&s", description: "Lightweight and fast text editor for coding." }
+            ]
+        };
+
+        function showSkills(category, btn) {
+            const grid = document.getElementById('skills-content');
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            btn.classList.add('active');
+
+            grid.innerHTML = '';
+            const fragment = document.createDocumentFragment();
+
+            skillData[category].forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.classList.add('skill-icon');
+                skillDiv.innerHTML = `
+          <img src="${skill.icon}" alt="${skill.name}">
+          <span>${skill.name}</span>
+          <div class="skill-desc">${skill.description}</div>
+        `;
+                fragment.appendChild(skillDiv);
+            });
+
+            grid.appendChild(fragment);
+        }
+
+        window.onload = () => {
+            const defaultTab = document.querySelector('.tab.active');
+            showSkills('frontend', defaultTab);
+        };
+
+
+
+
+        //for hamburger toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('nav > ul');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');  // Toggle hamburger icon animation
+            menu.classList.toggle('active');        // Toggle offcanvas menu visibility
+        });
+
+        //Top arrow icon for scrolling smooth        
+        const backToTopButton = document.querySelector('.back-to-top');
+        backToTopButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
