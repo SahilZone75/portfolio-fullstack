@@ -178,7 +178,7 @@
 
       try {
         // Send data to backend API using Fetch
-        const response = await fetch('http://localhost:5000/contact', {
+        const response = await fetch('https://portfolio-fullstack-kp8j.onrender.com/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, message }),
