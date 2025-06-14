@@ -53,7 +53,6 @@ git clone https://github.com/SahilZone75/portfolio-fullstack.git
 cd portfolio-fullstack
 
 
----
 ```
 ### 2. set-up-the-backend
 cd backend
@@ -62,8 +61,7 @@ cp .env.example .env   # configure your MONGODB_URI in the .env file
 npm start              # starts the server on http://localhost:5000
 
 
----
 
 ### 3-test-frontend-locally
 cd frontend
-# Simply open index.html in your browser
+## Simply open index.html in your browser
