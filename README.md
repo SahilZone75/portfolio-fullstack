@@ -54,14 +54,17 @@ cd portfolio-fullstack
 
 
 ```
-### 2. set-up-the-backend
+### 2. Set Up the Backend
+
+```bash
 cd backend
 npm install
 cp .env.example .env   # configure your MONGODB_URI in the .env file
 npm start              # starts the server on http://localhost:5000
 
 
-
+```
 ### 3-test-frontend-locally
+```bash
 cd frontend
 ## Simply open index.html in your browser
